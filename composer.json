@@ -18,8 +18,8 @@
 	"minimum-stability": "stable",
 	"require": {},
 	"require-dev": {
-		"10up/wp_mock": "dev-master",
 		"antecedent/patchwork": "1.2.*",
+		"10up/wp_mock": "dev-master",
 		"phpunit/phpunit"     : "*@stable",
 		"brianium/paratest"   : "dev-master"
 	}

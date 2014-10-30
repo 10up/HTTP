@@ -3,14 +3,18 @@
     backupGlobals="false"
     processIsolation="false"
     colors="false">
-    <testsuites></testsuites>
+    <testsuites>
+        <testsuite name="header">
+            <directory suffix="Tests.php">./tests/PHPUnit</directory>
+        </testsuite>
+    </testsuites>
     <groups>
         <include></include>
         <exclude></exclude>
     </groups>
     <filter>
         <whitelist>
-            <directory suffix=".php">src</directory>
+            <directory suffix=".php">php</directory>
             <exclude></exclude>
         </whitelist>
     </filter>

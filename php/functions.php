@@ -7,6 +7,8 @@
  */
 namespace TenUp\HTTP\Header;
 
+use TenUp\HTTP as H;
+
 /**
  * Add a header to the collection.
  *
@@ -15,7 +17,7 @@ namespace TenUp\HTTP\Header;
  * @param bool   $overwrite
  */
 function add( $key, $value = null, $overwrite = false ) {
-	$headers = Header::instance();
+	$headers = H\Header::instance();
 
 	if ( $overwrite ) {
 		$headers->set( $key, $value );
@@ -30,7 +32,7 @@ function add( $key, $value = null, $overwrite = false ) {
  * @param string $key
  */
 function remove( $key ) {
-	$headers = Header::instance();
+	$headers = H\Header::instance();
 
 	$headers->remove( $key );
 }
@@ -39,7 +41,7 @@ function remove( $key ) {
  * Clear all headers from the collection
  */
 function clear() {
-	$headers = Header::instance();
+	$headers = H\Header::instance();
 
 	$headers->clear();
 }
@@ -50,7 +52,7 @@ function clear() {
  * @return array
  */
 function get() {
-	$headers = Header::instance();
+	$headers = H\Header::instance();
 
 	return $headers->parsed();
 }
