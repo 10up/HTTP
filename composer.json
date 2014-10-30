@@ -16,7 +16,9 @@
 	],
 	"repository": {},
 	"minimum-stability": "stable",
-	"require": {},
+	"require": {
+		"php": ">=5.3"
+	},
 	"require-dev": {
 		"antecedent/patchwork": "1.2.*",
 		"10up/wp_mock": "dev-master",
