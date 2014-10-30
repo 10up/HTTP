@@ -1,0 +1,26 @@
+{
+	"name": "10up/http",
+	"description": "HTTP Header wrapper.",
+	"version": "0.0.1",
+	"type": "wordpress-plugin",
+	"keywords": [],
+	"homepage": "https://github.com/10up/http",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Eric Mann",
+			"email": "eric.mann@10up.com",
+			"homepage": "http://10up.com",
+			"role": "Developer"
+		}
+	],
+	"repository": {},
+	"minimum-stability": "stable",
+	"require": {},
+	"require-dev": {
+		"10up/wp_mock": "dev-master",
+		"antecedent/patchwork": "1.2.*",
+		"phpunit/phpunit"     : "*@stable",
+		"brianium/paratest"   : "dev-master"
+	}
+}
