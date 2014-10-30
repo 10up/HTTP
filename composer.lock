@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0e4920d5bec30ff32f8a4e3d8111588e",
+    "hash": "48e232798ecdb1496ae430f9c4252e2c",
     "packages": [],
     "packages-dev": [
         {
@@ -1106,6 +1106,8 @@
         "brianium/paratest": 20
     },
     "prefer-stable": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.3"
+    },
     "platform-dev": []
 }
