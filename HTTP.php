@@ -7,7 +7,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.html
  * @version   1.0.0
  */
-namespace TenUp\HTTP\v1_0_0;
+namespace TenUp\HTTP\v1_0;
 if ( version_compare( PHP_VERSION, "5.3", "<" ) ) {
 	trigger_error( "HTTP requires PHP version 5.3.0 or higher", E_USER_ERROR );
 }
