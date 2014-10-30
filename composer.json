@@ -1,8 +1,8 @@
 {
 	"name": "10up/http",
 	"description": "HTTP Header wrapper.",
-	"version": "0.0.1",
-	"type": "wordpress-plugin",
+	"version": "1.0.0",
+	"type": "wordpress-library",
 	"keywords": [],
 	"homepage": "https://github.com/10up/http",
 	"license": "MIT",
