@@ -24,5 +24,9 @@
 		"10up/wp_mock": "dev-master",
 		"phpunit/phpunit"     : "*@stable",
 		"brianium/paratest"   : "dev-master"
+	},
+	"autoload": {
+		"classmap": ["php/"],
+		"files"   : ["php/functions.php"]
 	}
 }
