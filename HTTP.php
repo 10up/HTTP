@@ -13,7 +13,7 @@ if ( version_compare( PHP_VERSION, "5.3", "<" ) ) {
 }
 
 // Require files
-if ( ! class_exists( '\\TenUp\\HTTP\\v1_0_0\\Header' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\\Header' ) ) {
 	require_once __DIR__ . '/php/header.php';
 	require_once __DIR__ . '/php/functions.php';
 }

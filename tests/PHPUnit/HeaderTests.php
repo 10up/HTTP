@@ -21,7 +21,7 @@ class HeaderTest extends TestCase {
 	public function test_instance() {
 		$this->assertNull( Header::instance() );
 
-		$property = new ReflectionProperty( 'TenUp\HTTP\v1_0_0\Header', 'container' );
+		$property = new ReflectionProperty( __NAMESPACE__ . '\\Header', 'container' );
 		$property->setAccessible( true );
 		$mock_header = $this->getMockHeaderObject();
 		$property->setValue( $mock_header );
@@ -33,17 +33,17 @@ class HeaderTest extends TestCase {
 	 * @runInSeparateProcess
 	 */
 	public function test___construct() {
-		$property = new ReflectionProperty( 'TenUp\HTTP\v1_0_0\Header', 'container' );
+		$property = new ReflectionProperty( __NAMESPACE__ . '\\Header', 'container' );
 		$property->setAccessible( true );
 
 		// Hackiest hack that ever did hack
 		$test = $this;
-		WP_Mock::wpFunction( 'TenUp\HTTP\v1_0_0\add_action', array(
+		WP_Mock::wpFunction( __NAMESPACE__ . '\\add_action', array(
 			'times'  => 1,
 			'args'   => array( 'send_headers', '*' ),
 			'return' => function ( $hook, $callback ) use ( $test ) {
 				$test->assertInternalType( 'callable', $callback );
-				$test->assertInstanceOf( 'TenUp\HTTP\v1_0_0\Header', $callback[0] );
+				$test->assertInstanceOf( __NAMESPACE__ . '\\Header', $callback[0] );
 				$test->assertEquals( 'apply', $callback[1] );
 			}
 		) );
@@ -185,7 +185,7 @@ class HeaderTest extends TestCase {
 		);
 		$object->shouldReceive( 'parsed' )->once()->andReturn( $parsed );
 		foreach ( $parsed as $header ) {
-			WP_Mock::wpFunction( 'TenUp\HTTP\v1_0_0\header', array(
+			WP_Mock::wpFunction( __NAMESPACE__ . '\\header', array(
 				'times' => 1,
 				'args'  => $header,
 			) );
@@ -202,7 +202,7 @@ class HeaderTest extends TestCase {
 	 */
 	protected function getMockHeaderObject() {
 		$methods = implode( ',', func_get_args() );
-		$class   = 'TenUp\HTTP\v1_0_0\Header';
+		$class   = __NAMESPACE__ . '\\Header';
 		if ( $methods ) {
 			$class .= "[$methods]";
 		}
@@ -213,7 +213,7 @@ class HeaderTest extends TestCase {
 	 * @return ReflectionProperty
 	 */
 	protected function getHeadersProperty() {
-		$header = new ReflectionProperty( 'TenUp\HTTP\v1_0_0\Header', 'headers' );
+		$header = new ReflectionProperty( __NAMESPACE__ . '\\Header', 'headers' );
 		$header->setAccessible( true );
 		return $header;
 	}

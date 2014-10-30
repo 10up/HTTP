@@ -63,12 +63,12 @@ class HeaderFunctionsTest extends H\TestCase {
 	 */
 	protected function mockHeaderObject() {
 		$methods = implode( ',', func_get_args() );
-		$class   = 'TenUp\HTTP\v1_0_0\Header';
+		$class   = __NAMESPACE__; // Since the object these functions apply to has the same mapping as the namespace ...
 		if ( $methods ) {
 			$class .= "[$methods]";
 		}
 		$mock     = Mockery::mock( $class );
-		$instance = new ReflectionProperty( 'TenUp\HTTP\v1_0_0\Header', 'container' );
+		$instance = new ReflectionProperty( __NAMESPACE__, 'container' );
 		$instance->setAccessible( true );
 		$instance->setValue( $mock );
 		return $mock;
