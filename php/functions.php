@@ -5,9 +5,9 @@
  * @package    HTTP
  * @subpackage Header
  */
-namespace TenUp\HTTP\v1_0\Header;
+namespace TenUp\HTTP\v1_0_0\Header;
 
-use TenUp\HTTP\v1_0 as H;
+use TenUp\HTTP\v1_0_0 as H;
 
 /**
  * Add a header to the collection.

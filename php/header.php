@@ -1,5 +1,5 @@
 <?php
-namespace TenUp\HTTP\v1_0;
+namespace TenUp\HTTP\v1_0_0;
 
 /**
  * Wrapper class for HTTP header manipulation.

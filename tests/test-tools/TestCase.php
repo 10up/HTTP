@@ -1,6 +1,6 @@
 <?php
 
-namespace TenUp\HTTP\v1_0;
+namespace TenUp\HTTP\v1_0_0;
 
 use PHPUnit_Framework_TestResult;
 use Text_Template;

@@ -1,10 +1,10 @@
 <?php
 
-namespace TenUp\HTTP\v1_0\Header;
+namespace TenUp\HTTP\v1_0_0\Header;
 
 use Mockery;
 use ReflectionProperty;
-use TenUp\HTTP\v1_0 as H;
+use TenUp\HTTP\v1_0_0 as H;
 
 /**
  * @group HTTP
@@ -63,12 +63,12 @@ class HeaderFunctionsTest extends H\TestCase {
 	 */
 	protected function mockHeaderObject() {
 		$methods = implode( ',', func_get_args() );
-		$class   = 'TenUp\HTTP\v1_0\Header';
+		$class   = 'TenUp\HTTP\v1_0_0\Header';
 		if ( $methods ) {
 			$class .= "[$methods]";
 		}
 		$mock     = Mockery::mock( $class );
-		$instance = new ReflectionProperty( 'TenUp\HTTP\v1_0\Header', 'container' );
+		$instance = new ReflectionProperty( 'TenUp\HTTP\v1_0_0\Header', 'container' );
 		$instance->setAccessible( true );
 		$instance->setValue( $mock );
 		return $mock;
